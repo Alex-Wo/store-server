@@ -4,7 +4,7 @@ from products.views import products, basket_add, basket_remove
 app_name = 'products'
 
 urlpatterns = [
-    path('', products, name='index'),
+    path('', products, name='index'),  # ../products/category/<category_id>/
     path('category/<int:category_id>/', products, name='category'),
     path('page/<int:page_number>/', products, name='paginator'),
     path('baskets/add/<int:product_id>/', basket_add, name='basket_add'),
